@@ -5,17 +5,17 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
 
-class foodcard extends StatefulWidget {
-  //const foodcard({ Key? key }) : super(key: key);
-  final String _name;
-  final String _calorie;
-  foodcard(this._name,this._calorie);
+class outtake extends StatefulWidget {
+  //const outtake({ Key? key }) : super(key: key);
+  final String _exercise;
+  outtake(this._exercise);
 
   @override
-  _foodcardState createState() => _foodcardState();
+  _outtakeState createState() => _outtakeState();
 }
 
-class _foodcardState extends State<foodcard> {
+class _outtakeState extends State<outtake> {
+  final _nameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -34,14 +34,14 @@ class _foodcardState extends State<foodcard> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                widget._name,
+                widget._exercise,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: color3,
                   fontWeight: FontWeight.bold
                 ),
               ),
-              Text(
+              /*Text(
                 widget._calorie,
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -49,7 +49,14 @@ class _foodcardState extends State<foodcard> {
                   fontWeight: FontWeight.bold
                   
                 ),
-              ),
+              ),*/
+              /*TextFormField(
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'Enter your username'
+                ),
+              ),*/
+             
               FloatingActionButton(
                 backgroundColor: color5,
                 onPressed: (){
